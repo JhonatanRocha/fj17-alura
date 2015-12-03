@@ -2,8 +2,6 @@ package br.com.fj17.model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
-import java.util.HashSet;
 
 public class Pagamentos {
 
