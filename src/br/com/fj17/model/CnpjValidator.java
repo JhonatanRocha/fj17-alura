@@ -44,4 +44,9 @@ public class CnpjValidator {
     public int hashCode() {
         return this.cnpj.hashCode(); // delegamos a geracao do hashCode da classe Cnpj para seu atributo String valor
     }
+    
+    @Override
+    public String toString() {
+    	return this.getCnpj();
+    }
 }

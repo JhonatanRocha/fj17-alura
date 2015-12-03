@@ -29,4 +29,12 @@ public class Divida {
 	public CnpjValidator getCnpjCredor() {
 		return cnpjCredor;
 	}
+
+	public void registra(Pagamento pagamento) {
+		pagamentos.registra(pagamento);
+	}
+
+	public double getValorPago() {
+		return pagamentos.getValorPago();
+	}
 }
