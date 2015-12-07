@@ -5,7 +5,7 @@ import java.util.Calendar;
 public class Pagamento {
 	
 	private String pagador;
-	private String cnpjPagador;
+	private Documento documentoPagador;
 	private double valor;
 	private Calendar data;
 
@@ -16,15 +16,7 @@ public class Pagamento {
 	public void setPagador(String pagador) {
 		this.pagador = pagador;
 	}
-
-	public String getCnpjPagador() {
-		return cnpjPagador;
-	}
-
-	public void setCnpjPagador(String cnpjPagador) {
-		this.cnpjPagador = cnpjPagador;
-	}
-
+	
 	public double getValor() {
 		return valor;
 	}
@@ -39,4 +31,12 @@ public class Pagamento {
     public void setData(Calendar data) {
         this.data = data;
     }
+
+	public Documento getDocumentoPagador() {
+		return documentoPagador;
+	}
+
+	public void setDocumentoPagador(Documento documentoPagador) {
+		this.documentoPagador = documentoPagador;
+	}
 }

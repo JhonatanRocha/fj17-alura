@@ -1,9 +1,17 @@
 package br.com.fj17.model;
 
-public class CnpjValidator {
+public class CnpjValidator implements Documento {
 
 	private String cnpj;
 	
+	public CnpjValidator() {
+	
+	}
+	
+	public CnpjValidator(String numero) {
+	
+	}
+
 	public boolean isValid() {
 		return primeiroDigitoVerificador() == primeiroDigitoCorreto()
 				&& segundoDigitoVerificador() == segundoDigitoCorreto();
@@ -49,4 +57,9 @@ public class CnpjValidator {
     public String toString() {
     	return this.getCnpj();
     }
+
+	@Override
+	public String getNumeroDocumento() {
+		return null;
+	}
 }

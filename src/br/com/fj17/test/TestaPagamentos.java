@@ -15,5 +15,11 @@ public class TestaPagamentos {
 		pagamentos.registra(pagamentoSecond);
 		
 		System.out.println("Valor total pago: " + pagamentos.getValorPago());
+		
+		Iterable<Pagamento> listaPagamentos = new Pagamentos();
+	
+		for (Pagamento pagamento2 : pagamentos) {
+			System.out.println(pagamento2.getValor());
+		}
 	}
 }

@@ -5,15 +5,16 @@ import br.com.fj17.model.Pagamento;
 
 public class BalancoEmpresa {
 
-	private HashMap<String, Divida> dividas = new HashMap<String, Divida>();
-
+	private HashMap<Documento, Divida> dividas = new HashMap<Documento, Divida>();
+	
 	public void registraDivida(Divida divida) {
-        dividas.put(divida.getCnpjCredor().getCnpj(), divida);
+		if (divida.getDocumentoCredor() != null) {
+			dividas.put(divida.getDocumentoCredor(), divida);
+		}
 	}
 
-	public void pagaDivida(String cnpjCredor, Pagamento pagamento) {
-		Divida divida = dividas.get(cnpjCredor);
-		
+	public void pagaDivida(Documento documentoCredor, Pagamento pagamento) {
+		Divida divida = dividas.get(documentoCredor);
 		if(divida != null){
 			divida.registra(pagamento);
 		}

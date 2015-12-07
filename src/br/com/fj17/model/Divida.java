@@ -3,7 +3,7 @@ package br.com.fj17.model;
 public class Divida {
 	private double total;
 	private String credor;
-	private CnpjValidator cnpjCredor = new CnpjValidator();
+	private Documento documentoCredor;
 	private Pagamentos pagamentos = new Pagamentos();
 
 	public double getTotal() {
@@ -26,15 +26,19 @@ public class Divida {
 		return pagamentos;
 	}
 
-	public CnpjValidator getCnpjCredor() {
-		return cnpjCredor;
-	}
-
 	public void registra(Pagamento pagamento) {
 		pagamentos.registra(pagamento);
 	}
 
 	public double getValorPago() {
 		return pagamentos.getValorPago();
+	}
+
+	public Documento getDocumentoCredor() {
+		return documentoCredor;
+	}
+
+	public void setDocumentoCredor(Documento documentoCredor) {
+		this.documentoCredor = documentoCredor;
 	}
 }
